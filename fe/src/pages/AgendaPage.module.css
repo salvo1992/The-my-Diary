@@ -60,6 +60,22 @@ h1 {
   max-width: none;
 }
 
-.rbc-off-range-bg {
-  background-color: gray; /* Colore per le celle del mese successivo */
+
+.event {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deleteIcon {
+  cursor: pointer;
+  color: #ff0000;
+  font-size: 18px;
+}
+
+.deleteIcon:hover {
+  color: #cc0000;
+}
+.rbc-off-range-bg{
+  background: #898787; /* Colore per le celle del mese successivo */
 }

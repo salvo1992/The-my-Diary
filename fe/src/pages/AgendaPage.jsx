@@ -4,6 +4,7 @@ import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import AppContext from '../context/AppContext';
 import styles from './AgendaPage.module.css';
+import { FaTrash } from 'react-icons/fa'; // Importa l'icona del cestino
 
 const localizer = momentLocalizer(moment);
 
@@ -12,9 +13,22 @@ const AgendaPage = () => {
   const [newEvent, setNewEvent] = useState({ title: '', start: '', end: '' });
 
   const addEvent = () => {
-    setEvents([...events, { ...newEvent, start: new Date(newEvent.start), end: new Date(newEvent.end) }]);
-    setNewEvent({ title: '', start: '', end: '' });
+    if (newEvent.title && newEvent.start && newEvent.end) {
+      setEvents([...events, { ...newEvent, start: new Date(newEvent.start), end: new Date(newEvent.end) }]);
+      setNewEvent({ title: '', start: '', end: '' });
+    }
   };
+
+  const deleteEvent = (eventToDelete) => {
+    setEvents(events.filter(event => event !== eventToDelete));
+  };
+
+  const Event = ({ event }) => (
+    <div className={styles.event}>
+      <span>{event.title}</span>
+      <FaTrash className={styles.deleteIcon} onClick={() => deleteEvent(event)} />
+    </div>
+  );
 
   return (
     <div className={styles.container}>
@@ -47,14 +61,10 @@ const AgendaPage = () => {
         startAccessor="start"
         endAccessor="end"
         style={{ height: 500, marginTop: '20px' }}
-        eventPropGetter={(event) => ({
-          className: styles.event,
-        })}
+        components={{ event: Event }} // Usa il componente personalizzato per l'evento
       />
     </div>
   );
 };
 
 export default AgendaPage;
-
-

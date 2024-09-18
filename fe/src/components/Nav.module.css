@@ -1,0 +1,28 @@
+.navBar {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    padding: 10px 0;
+  }
+  
+  .navItem {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .navItem:hover {
+    color: #1a73e8; /* Colore al passaggio del mouse */
+  }
+  
+  .navIcon {
+    margin-right: 10px; /* Spazio tra l'icona e il testo */
+  }
+  
+  .navItem:visited {
+    color: white; /* Mantiene il colore bianco per i link visitati */
+  }
+  

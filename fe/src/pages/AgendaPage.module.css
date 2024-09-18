@@ -1,0 +1,65 @@
+.container {
+  padding: 20px;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.inputField {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1a73e8;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #1558d6;
+}
+
+/* Gestisci l'overflow e il colore delle celle */
+.rbc-event {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rbc-event:hover {
+  white-space: normal;
+  overflow: visible;
+  max-width: none;
+}
+
+.rbc-off-range-bg {
+  background-color: gray; /* Colore per le celle del mese successivo */
+}

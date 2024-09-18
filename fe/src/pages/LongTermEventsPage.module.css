@@ -1,0 +1,49 @@
+/* LongTermEventsPage.module.css */
+
+.container {
+  padding: 20px;
+  background-color: black; /* Sfondo nero */
+  color: white; /* Testo bianco */
+  min-height: 100vh;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.inputField {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #333; /* Sfondo scuro per gli input */
+  border: none;
+  color: white; /* Testo bianco negli input */
+  border-radius: 5px;
+}
+
+.button {
+  background-color: #1a73e8; /* Colore blu per i pulsanti */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #155ab6; /* Colore blu più scuro per l'hover */
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  background-color: #222; /* Sfondo scuro per ogni evento */
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  color: white; /* Testo bianco */
+}

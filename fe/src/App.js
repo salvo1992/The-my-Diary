@@ -5,7 +5,7 @@ import BudgetPage from './pages/BudgetPage';
 import SavingsPage from './pages/SavingsPage';
 import LongTermEventsPage from './pages/LongTermEventsPage';
 import AgendaPage from './pages/AgendaPage';
-import styles from './App.module.css'; 
+
 const App = () => {
   return (
     <Router>
